@@ -5,6 +5,7 @@ Auto-populate a table from TablePress
 
 
 **Setup**
+* First you need [Caldera Forms](https://wordpress.org/plugins/caldera-forms/) installed and a form setup with entries.
 * Create a table as usual.
 * For the first row, use the field slug you want that colum to be for.
 * Leave a second row blank.
