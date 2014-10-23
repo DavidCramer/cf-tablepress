@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: Auto-Populate TablePress from Caldera Forms
+  Plugin Name: TablePress - Caldera Forms
   Plugin URI: http://digilab.co.za
   Description: Auto populate a TablePress table with Caldera Forms submissions.
   Author: David Cramer
