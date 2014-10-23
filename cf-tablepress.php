@@ -25,12 +25,17 @@ function cf_tablepress_populate_table( $table, $options ){
 	global $wpdb, $form;
 	
 	$forms = get_option( '_caldera_forms');
-	// get extra classes
-	$classes = explode(' ', $options['extra_css_classes'] );
-
-	foreach( $forms as $form_check ){
-		if( $form_check['ID'] == $options['form'] || strtolower( $form_check['name'] ) == strtolower( $options['form'] ) ){
+	if( empty( $forms ) ){
+		// no forms
+		return $table;
+	}
+	foreach( (array) $forms as $form_check ){
+		if( $form_check['ID'] == $options['form'] || strtolower( $form_check['name'] ) == strtolower( $options['form'] ) ){			
 			$form = get_option( $form_check['ID'] );
+			if( empty( $form['fields'] ) ){
+				// no fields
+				return $table;
+			}
 			break;
 		}
 	}
